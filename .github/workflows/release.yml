@@ -17,7 +17,6 @@ jobs:
         run: pnpm config set '//registry.npmjs.org/:_authToken' "${NODE_AUTH_TOKEN}"
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-      - run: pnpm build
       - run: pnpx zardoy-release npm
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
