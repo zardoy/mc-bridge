@@ -4,7 +4,10 @@
     "private": true,
     "license": "MIT",
     "description": "Unifies and normalizes Minecraft protocol packets across different versions into a consistent API",
-    "scripts": {},
+    "scripts": {
+        "watch": "tsc --watch",
+        "build": "tsc"
+    },
     "release": {
         "initialVersion": {
             "version": "0.1.0"

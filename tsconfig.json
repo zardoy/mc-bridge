@@ -1,8 +1,11 @@
 {
     "extends": "@zardoy/tsconfig/tsconfig",
     "compilerOptions": {
+        "noEmit": false,
         "resolveJsonModule": true,
-        "noImplicitReturns": false
+        "noImplicitReturns": false,
+        "outDir": "./dist",
+        "declaration": true
     },
     "include": [
         "src"
