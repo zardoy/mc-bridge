@@ -1,6 +1,9 @@
 {
     "extends": "@zardoy/tsconfig/tsconfig",
-    "compilerOptions": {},
+    "compilerOptions": {
+        "resolveJsonModule": true,
+        "noImplicitReturns": false
+    },
     "include": [
         "src"
     ]

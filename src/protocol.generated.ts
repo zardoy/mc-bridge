@@ -1,5 +1,5 @@
 /**
- * Generated from minecraft-data v3.92.0
+ * Generated from minecraft-data v3.95.0
  * DO NOT EDIT
  */
 
@@ -223,6 +223,17 @@ export interface ClientWriteMap {
     item: any;
   }[];
     cursorItem: any;
+  } | /** 1.21.5 */ {
+    windowId: any;
+    stateId: number;
+    slot: number;
+    mouseButton: number;
+    mode: number;
+    changedSlots: {
+    location: number;
+    item: any | null;
+  }[];
+    cursorItem: any | null;
   };
   /** Removed in 1.17 */
   transaction: /** 1.7 */ {
@@ -328,64 +339,6 @@ export interface ClientWriteMap {
   custom_payload: /** 1.7 */ {
     channel: string;
     data: any;
-  };
-  packet: /** 1.7 */ {
-    name: 'keep_alive' | 'chat' | 'use_entity' | 'flying' | 'position' | 'look' | 'position_look' | 'block_dig' | 'block_place' | 'held_item_slot' | 'arm_animation' | 'entity_action' | 'steer_vehicle' | 'close_window' | 'window_click' | 'transaction' | 'set_creative_slot' | 'enchant_item' | 'update_sign' | 'abilities' | 'tab_complete' | 'settings' | 'client_command' | 'custom_payload';
-    params: any;
-  } | /** 1.8 */ {
-    name: 'keep_alive' | 'chat' | 'use_entity' | 'flying' | 'position' | 'look' | 'position_look' | 'block_dig' | 'block_place' | 'held_item_slot' | 'arm_animation' | 'entity_action' | 'steer_vehicle' | 'close_window' | 'window_click' | 'transaction' | 'set_creative_slot' | 'enchant_item' | 'update_sign' | 'abilities' | 'tab_complete' | 'settings' | 'client_command' | 'custom_payload' | 'spectate' | 'resource_pack_receive';
-    params: any;
-  } | /** 1.9 */ {
-    name: 'teleport_confirm' | 'tab_complete' | 'chat' | 'client_command' | 'settings' | 'transaction' | 'enchant_item' | 'window_click' | 'close_window' | 'custom_payload' | 'use_entity' | 'keep_alive' | 'position' | 'position_look' | 'look' | 'flying' | 'vehicle_move' | 'steer_boat' | 'abilities' | 'block_dig' | 'entity_action' | 'steer_vehicle' | 'resource_pack_receive' | 'held_item_slot' | 'set_creative_slot' | 'update_sign' | 'arm_animation' | 'spectate' | 'block_place' | 'use_item';
-    params: any;
-  } | /** 1.12 */ {
-    name: 'teleport_confirm' | 'prepare_crafting_grid' | 'tab_complete' | 'chat' | 'client_command' | 'settings' | 'transaction' | 'enchant_item' | 'window_click' | 'close_window' | 'custom_payload' | 'use_entity' | 'keep_alive' | 'flying' | 'position' | 'position_look' | 'look' | 'vehicle_move' | 'steer_boat' | 'abilities' | 'block_dig' | 'entity_action' | 'steer_vehicle' | 'crafting_book_data' | 'resource_pack_receive' | 'advancement_tab' | 'held_item_slot' | 'set_creative_slot' | 'update_sign' | 'arm_animation' | 'spectate' | 'block_place' | 'use_item';
-    params: any;
-  } | /** 1.12.1 */ {
-    name: 'teleport_confirm' | 'tab_complete' | 'chat' | 'client_command' | 'settings' | 'transaction' | 'enchant_item' | 'window_click' | 'close_window' | 'custom_payload' | 'use_entity' | 'keep_alive' | 'flying' | 'position' | 'position_look' | 'look' | 'vehicle_move' | 'steer_boat' | 'craft_recipe_request' | 'abilities' | 'block_dig' | 'entity_action' | 'steer_vehicle' | 'crafting_book_data' | 'resource_pack_receive' | 'advancement_tab' | 'held_item_slot' | 'set_creative_slot' | 'update_sign' | 'arm_animation' | 'spectate' | 'block_place' | 'use_item';
-    params: any;
-  } | /** 1.13 */ {
-    name: 'teleport_confirm' | 'query_block_nbt' | 'chat' | 'client_command' | 'settings' | 'tab_complete' | 'transaction' | 'enchant_item' | 'window_click' | 'close_window' | 'custom_payload' | 'edit_book' | 'query_entity_nbt' | 'use_entity' | 'keep_alive' | 'flying' | 'position' | 'position_look' | 'look' | 'vehicle_move' | 'steer_boat' | 'pick_item' | 'craft_recipe_request' | 'abilities' | 'block_dig' | 'entity_action' | 'steer_vehicle' | 'crafting_book_data' | 'name_item' | 'resource_pack_receive' | 'advancement_tab' | 'select_trade' | 'set_beacon_effect' | 'held_item_slot' | 'update_command_block' | 'update_command_block_minecart' | 'set_creative_slot' | 'update_structure_block' | 'update_sign' | 'arm_animation' | 'spectate' | 'block_place' | 'use_item';
-    params: any;
-  } | /** 1.14 */ {
-    name: 'teleport_confirm' | 'query_block_nbt' | 'set_difficulty' | 'chat' | 'client_command' | 'settings' | 'tab_complete' | 'transaction' | 'enchant_item' | 'window_click' | 'close_window' | 'custom_payload' | 'edit_book' | 'query_entity_nbt' | 'use_entity' | 'keep_alive' | 'lock_difficulty' | 'position' | 'position_look' | 'look' | 'flying' | 'vehicle_move' | 'steer_boat' | 'pick_item' | 'craft_recipe_request' | 'abilities' | 'block_dig' | 'entity_action' | 'steer_vehicle' | 'crafting_book_data' | 'name_item' | 'resource_pack_receive' | 'advancement_tab' | 'select_trade' | 'set_beacon_effect' | 'held_item_slot' | 'update_command_block' | 'update_command_block_minecart' | 'set_creative_slot' | 'update_jigsaw_block' | 'update_structure_block' | 'update_sign' | 'arm_animation' | 'spectate' | 'block_place' | 'use_item';
-    params: any;
-  } | /** 1.16 */ {
-    name: 'teleport_confirm' | 'query_block_nbt' | 'set_difficulty' | 'chat' | 'client_command' | 'settings' | 'tab_complete' | 'transaction' | 'enchant_item' | 'window_click' | 'close_window' | 'custom_payload' | 'edit_book' | 'query_entity_nbt' | 'use_entity' | 'generate_structure' | 'keep_alive' | 'lock_difficulty' | 'position' | 'position_look' | 'look' | 'flying' | 'vehicle_move' | 'steer_boat' | 'pick_item' | 'craft_recipe_request' | 'abilities' | 'block_dig' | 'entity_action' | 'steer_vehicle' | 'crafting_book_data' | 'name_item' | 'resource_pack_receive' | 'advancement_tab' | 'select_trade' | 'set_beacon_effect' | 'held_item_slot' | 'update_command_block' | 'update_command_block_minecart' | 'set_creative_slot' | 'update_jigsaw_block' | 'update_structure_block' | 'update_sign' | 'arm_animation' | 'spectate' | 'block_place' | 'use_item';
-    params: any;
-  } | /** 1.16.2 */ {
-    name: 'teleport_confirm' | 'query_block_nbt' | 'set_difficulty' | 'chat' | 'client_command' | 'settings' | 'tab_complete' | 'transaction' | 'enchant_item' | 'window_click' | 'close_window' | 'custom_payload' | 'edit_book' | 'query_entity_nbt' | 'use_entity' | 'generate_structure' | 'keep_alive' | 'lock_difficulty' | 'position' | 'position_look' | 'look' | 'flying' | 'vehicle_move' | 'steer_boat' | 'pick_item' | 'craft_recipe_request' | 'abilities' | 'block_dig' | 'entity_action' | 'steer_vehicle' | 'recipe_book' | 'displayed_recipe' | 'name_item' | 'resource_pack_receive' | 'advancement_tab' | 'select_trade' | 'set_beacon_effect' | 'held_item_slot' | 'update_command_block' | 'update_command_block_minecart' | 'set_creative_slot' | 'update_jigsaw_block' | 'update_structure_block' | 'update_sign' | 'arm_animation' | 'spectate' | 'block_place' | 'use_item';
-    params: any;
-  } | /** 1.17 */ {
-    name: 'teleport_confirm' | 'query_block_nbt' | 'set_difficulty' | 'chat' | 'client_command' | 'settings' | 'tab_complete' | 'enchant_item' | 'window_click' | 'close_window' | 'custom_payload' | 'edit_book' | 'query_entity_nbt' | 'use_entity' | 'generate_structure' | 'keep_alive' | 'lock_difficulty' | 'position' | 'position_look' | 'look' | 'flying' | 'vehicle_move' | 'steer_boat' | 'pick_item' | 'craft_recipe_request' | 'abilities' | 'block_dig' | 'entity_action' | 'steer_vehicle' | 'pong' | 'recipe_book' | 'displayed_recipe' | 'name_item' | 'resource_pack_receive' | 'advancement_tab' | 'select_trade' | 'set_beacon_effect' | 'held_item_slot' | 'update_command_block' | 'update_command_block_minecart' | 'set_creative_slot' | 'update_jigsaw_block' | 'update_structure_block' | 'update_sign' | 'arm_animation' | 'spectate' | 'block_place' | 'use_item';
-    params: any;
-  } | /** 1.19 */ {
-    name: 'teleport_confirm' | 'query_block_nbt' | 'set_difficulty' | 'chat_command' | 'chat_message' | 'chat_preview' | 'client_command' | 'settings' | 'tab_complete' | 'enchant_item' | 'window_click' | 'close_window' | 'custom_payload' | 'edit_book' | 'query_entity_nbt' | 'use_entity' | 'generate_structure' | 'keep_alive' | 'lock_difficulty' | 'position' | 'position_look' | 'look' | 'flying' | 'vehicle_move' | 'steer_boat' | 'pick_item' | 'craft_recipe_request' | 'abilities' | 'block_dig' | 'entity_action' | 'steer_vehicle' | 'pong' | 'recipe_book' | 'displayed_recipe' | 'name_item' | 'resource_pack_receive' | 'advancement_tab' | 'select_trade' | 'set_beacon_effect' | 'held_item_slot' | 'update_command_block' | 'update_command_block_minecart' | 'set_creative_slot' | 'update_jigsaw_block' | 'update_structure_block' | 'update_sign' | 'arm_animation' | 'spectate' | 'block_place' | 'use_item';
-    params: any;
-  } | /** 1.19.2 */ {
-    name: 'teleport_confirm' | 'query_block_nbt' | 'set_difficulty' | 'message_acknowledgement' | 'chat_command' | 'chat_message' | 'chat_preview' | 'client_command' | 'settings' | 'tab_complete' | 'enchant_item' | 'window_click' | 'close_window' | 'custom_payload' | 'edit_book' | 'query_entity_nbt' | 'use_entity' | 'generate_structure' | 'keep_alive' | 'lock_difficulty' | 'position' | 'position_look' | 'look' | 'flying' | 'vehicle_move' | 'steer_boat' | 'pick_item' | 'craft_recipe_request' | 'abilities' | 'block_dig' | 'entity_action' | 'steer_vehicle' | 'pong' | 'recipe_book' | 'displayed_recipe' | 'name_item' | 'resource_pack_receive' | 'advancement_tab' | 'select_trade' | 'set_beacon_effect' | 'held_item_slot' | 'update_command_block' | 'update_command_block_minecart' | 'set_creative_slot' | 'update_jigsaw_block' | 'update_structure_block' | 'update_sign' | 'arm_animation' | 'spectate' | 'block_place' | 'use_item';
-    params: any;
-  } | /** 1.19.3 */ {
-    name: 'teleport_confirm' | 'query_block_nbt' | 'set_difficulty' | 'message_acknowledgement' | 'chat_command' | 'chat_message' | 'client_command' | 'settings' | 'tab_complete' | 'enchant_item' | 'window_click' | 'close_window' | 'custom_payload' | 'edit_book' | 'query_entity_nbt' | 'use_entity' | 'generate_structure' | 'keep_alive' | 'lock_difficulty' | 'position' | 'position_look' | 'look' | 'flying' | 'vehicle_move' | 'steer_boat' | 'pick_item' | 'craft_recipe_request' | 'abilities' | 'block_dig' | 'entity_action' | 'steer_vehicle' | 'pong' | 'chat_session_update' | 'recipe_book' | 'displayed_recipe' | 'name_item' | 'resource_pack_receive' | 'advancement_tab' | 'select_trade' | 'set_beacon_effect' | 'held_item_slot' | 'update_command_block' | 'update_command_block_minecart' | 'set_creative_slot' | 'update_jigsaw_block' | 'update_structure_block' | 'update_sign' | 'arm_animation' | 'spectate' | 'block_place' | 'use_item';
-    params: any;
-  } | /** 1.19.4 */ {
-    name: 'teleport_confirm' | 'query_block_nbt' | 'set_difficulty' | 'message_acknowledgement' | 'chat_command' | 'chat_message' | 'chat_session_update' | 'client_command' | 'settings' | 'tab_complete' | 'enchant_item' | 'window_click' | 'close_window' | 'custom_payload' | 'edit_book' | 'query_entity_nbt' | 'use_entity' | 'generate_structure' | 'keep_alive' | 'lock_difficulty' | 'position' | 'position_look' | 'look' | 'flying' | 'vehicle_move' | 'steer_boat' | 'pick_item' | 'craft_recipe_request' | 'abilities' | 'block_dig' | 'entity_action' | 'steer_vehicle' | 'pong' | 'recipe_book' | 'displayed_recipe' | 'name_item' | 'resource_pack_receive' | 'advancement_tab' | 'select_trade' | 'set_beacon_effect' | 'held_item_slot' | 'update_command_block' | 'update_command_block_minecart' | 'set_creative_slot' | 'update_jigsaw_block' | 'update_structure_block' | 'update_sign' | 'arm_animation' | 'spectate' | 'block_place' | 'use_item';
-    params: any;
-  } | /** 1.20.2 */ {
-    name: 'teleport_confirm' | 'query_block_nbt' | 'set_difficulty' | 'message_acknowledgement' | 'chat_command' | 'chat_message' | 'chat_session_update' | 'chunk_batch_received' | 'client_command' | 'settings' | 'tab_complete' | 'configuration_acknowledged' | 'enchant_item' | 'window_click' | 'close_window' | 'custom_payload' | 'edit_book' | 'query_entity_nbt' | 'use_entity' | 'generate_structure' | 'keep_alive' | 'lock_difficulty' | 'position' | 'position_look' | 'look' | 'flying' | 'vehicle_move' | 'steer_boat' | 'pick_item' | 'ping_request' | 'craft_recipe_request' | 'abilities' | 'block_dig' | 'entity_action' | 'steer_vehicle' | 'pong' | 'recipe_book' | 'displayed_recipe' | 'name_item' | 'resource_pack_receive' | 'advancement_tab' | 'select_trade' | 'set_beacon_effect' | 'held_item_slot' | 'update_command_block' | 'update_command_block_minecart' | 'set_creative_slot' | 'update_jigsaw_block' | 'update_structure_block' | 'update_sign' | 'arm_animation' | 'spectate' | 'block_place' | 'use_item';
-    params: any;
-  } | /** 1.20.3 */ {
-    name: 'teleport_confirm' | 'query_block_nbt' | 'set_difficulty' | 'message_acknowledgement' | 'chat_command' | 'chat_message' | 'chat_session_update' | 'chunk_batch_received' | 'client_command' | 'settings' | 'tab_complete' | 'configuration_acknowledged' | 'enchant_item' | 'window_click' | 'close_window' | 'set_slot_state' | 'custom_payload' | 'edit_book' | 'query_entity_nbt' | 'use_entity' | 'generate_structure' | 'keep_alive' | 'lock_difficulty' | 'position' | 'position_look' | 'look' | 'flying' | 'vehicle_move' | 'steer_boat' | 'pick_item' | 'ping_request' | 'craft_recipe_request' | 'abilities' | 'block_dig' | 'entity_action' | 'steer_vehicle' | 'pong' | 'recipe_book' | 'displayed_recipe' | 'name_item' | 'resource_pack_receive' | 'advancement_tab' | 'select_trade' | 'set_beacon_effect' | 'held_item_slot' | 'update_command_block' | 'update_command_block_minecart' | 'set_creative_slot' | 'update_jigsaw_block' | 'update_structure_block' | 'update_sign' | 'arm_animation' | 'spectate' | 'block_place' | 'use_item';
-    params: any;
-  } | /** 1.20.5 */ {
-    name: 'teleport_confirm' | 'query_block_nbt' | 'set_difficulty' | 'message_acknowledgement' | 'chat_command' | 'chat_command_signed' | 'chat_message' | 'chat_session_update' | 'chunk_batch_received' | 'client_command' | 'settings' | 'tab_complete' | 'configuration_acknowledged' | 'enchant_item' | 'window_click' | 'close_window' | 'set_slot_state' | 'cookie_response' | 'custom_payload' | 'debug_sample_subscription' | 'edit_book' | 'query_entity_nbt' | 'use_entity' | 'generate_structure' | 'keep_alive' | 'lock_difficulty' | 'position' | 'position_look' | 'look' | 'flying' | 'vehicle_move' | 'steer_boat' | 'pick_item' | 'ping_request' | 'craft_recipe_request' | 'abilities' | 'block_dig' | 'entity_action' | 'steer_vehicle' | 'pong' | 'recipe_book' | 'displayed_recipe' | 'name_item' | 'resource_pack_receive' | 'advancement_tab' | 'select_trade' | 'set_beacon_effect' | 'held_item_slot' | 'update_command_block' | 'update_command_block_minecart' | 'set_creative_slot' | 'update_jigsaw_block' | 'update_structure_block' | 'update_sign' | 'arm_animation' | 'spectate' | 'block_place' | 'use_item';
-    params: any;
-  } | /** 1.21.3 */ {
-    name: 'teleport_confirm' | 'query_block_nbt' | 'select_bundle_item' | 'set_difficulty' | 'message_acknowledgement' | 'chat_command' | 'chat_command_signed' | 'chat_message' | 'chat_session_update' | 'chunk_batch_received' | 'client_command' | 'tick_end' | 'settings' | 'tab_complete' | 'configuration_acknowledged' | 'enchant_item' | 'window_click' | 'close_window' | 'set_slot_state' | 'cookie_response' | 'custom_payload' | 'debug_sample_subscription' | 'edit_book' | 'query_entity_nbt' | 'use_entity' | 'generate_structure' | 'keep_alive' | 'lock_difficulty' | 'position' | 'position_look' | 'look' | 'flying' | 'vehicle_move' | 'steer_boat' | 'pick_item' | 'ping_request' | 'craft_recipe_request' | 'abilities' | 'block_dig' | 'entity_action' | 'player_input' | 'pong' | 'recipe_book' | 'displayed_recipe' | 'name_item' | 'resource_pack_receive' | 'advancement_tab' | 'select_trade' | 'set_beacon_effect' | 'held_item_slot' | 'update_command_block' | 'update_command_block_minecart' | 'set_creative_slot' | 'update_jigsaw_block' | 'update_structure_block' | 'update_sign' | 'arm_animation' | 'spectate' | 'block_place' | 'use_item';
-    params: any;
-  } | /** 1.21.4 */ {
-    name: 'teleport_confirm' | 'query_block_nbt' | 'select_bundle_item' | 'set_difficulty' | 'message_acknowledgement' | 'chat_command' | 'chat_command_signed' | 'chat_message' | 'chat_session_update' | 'chunk_batch_received' | 'client_command' | 'tick_end' | 'settings' | 'tab_complete' | 'configuration_acknowledged' | 'enchant_item' | 'window_click' | 'close_window' | 'set_slot_state' | 'cookie_response' | 'custom_payload' | 'debug_sample_subscription' | 'edit_book' | 'query_entity_nbt' | 'use_entity' | 'generate_structure' | 'keep_alive' | 'lock_difficulty' | 'position' | 'position_look' | 'look' | 'flying' | 'vehicle_move' | 'steer_boat' | 'pick_item_from_block' | 'pick_item_from_entity' | 'ping_request' | 'craft_recipe_request' | 'abilities' | 'block_dig' | 'entity_action' | 'player_input' | 'player_loaded' | 'pong' | 'recipe_book' | 'displayed_recipe' | 'name_item' | 'resource_pack_receive' | 'advancement_tab' | 'select_trade' | 'set_beacon_effect' | 'held_item_slot' | 'update_command_block' | 'update_command_block_minecart' | 'set_creative_slot' | 'update_jigsaw_block' | 'update_structure_block' | 'update_sign' | 'arm_animation' | 'spectate' | 'block_place' | 'use_item';
-    params: any;
   };
   spectate: /** 1.8 */ {
     target: string;
@@ -582,6 +535,23 @@ export interface ClientWriteMap {
     integrity: number;
     seed: number;
     flags: number;
+  } | /** 1.21.5 */ {
+    location: { x: number, y: number, z: number };
+    action: number;
+    mode: number;
+    name: string;
+    offset_x: number;
+    offset_y: number;
+    offset_z: number;
+    size_x: number;
+    size_y: number;
+    size_z: number;
+    mirror: number;
+    rotation: number;
+    metadata: string;
+    integrity: number;
+    seed: number;
+    flags: 'ignore_entities' | 'show_air' | 'show_bounding_box' | 'strict';
   };
   set_difficulty: /** 1.14 */ {
     newDifficulty: number;
@@ -683,6 +653,14 @@ export interface ClientWriteMap {
     signature: any | null;
     offset: number;
     acknowledged: any;
+  } | /** 1.21.5 */ {
+    message: string;
+    timestamp: bigint;
+    salt: bigint;
+    signature: any | null;
+    offset: number;
+    acknowledged: any;
+    checksum: number;
   };
   /** Removed in 1.19.3 */
   chat_preview: /** 1.19 */ {
@@ -729,6 +707,17 @@ export interface ClientWriteMap {
   }[];
     messageCount: number;
     acknowledged: any;
+  } | /** 1.21.5 */ {
+    command: string;
+    timestamp: bigint;
+    salt: bigint;
+    argumentSignatures: {
+    argumentName: string;
+    signature: any;
+  }[];
+    messageCount: number;
+    acknowledged: any;
+    checksum: number;
   };
   debug_sample_subscription: /** 1.20.5 */ {
     type: number;
@@ -753,6 +742,23 @@ export interface ClientWriteMap {
   };
   player_loaded: /** 1.21.4 */ {
 
+  };
+  set_test_block: /** 1.21.5 */ {
+    position: { x: number, y: number, z: number };
+    mode: number;
+    message: string;
+  };
+  test_instance_block_action: /** 1.21.5 */ {
+    pos: { x: number, y: number, z: number };
+    action: number;
+    data: {
+    test: any | null;
+    size: any;
+    rotation: number;
+    ignoreEntities: boolean;
+    status: number;
+    errorMessage: any | null;
+  };
   };
 }
 
@@ -1255,6 +1261,7 @@ export interface ClientOnMap {
     location: { x: number, y: number, z: number };
     direction: number;
   };
+  /** Removed in 1.21.5 */
   spawn_entity_experience_orb: /** 1.7 */ {
     entityId: number;
     x: number;
@@ -1484,6 +1491,21 @@ export interface ClientOnMap {
     x: number;
     z: number;
     heightmaps: any;
+    chunkData: any;
+    blockEntities: any[];
+    skyLightMask: bigint[];
+    blockLightMask: bigint[];
+    emptySkyLightMask: bigint[];
+    emptyBlockLightMask: bigint[];
+    skyLight: number[][];
+    blockLight: number[][];
+  } | /** 1.21.5 */ {
+    x: number;
+    z: number;
+    heightmaps: {
+    type: number;
+    data: bigint[];
+  }[];
     chunkData: any;
     blockEntities: any[];
     skyLightMask: bigint[];
@@ -2043,76 +2065,6 @@ any
   } | /** 1.20.3 */ {
     reason: any;
   };
-  packet: /** 1.7 */ {
-    name: 'keep_alive' | 'login' | 'chat' | 'update_time' | 'entity_equipment' | 'spawn_position' | 'update_health' | 'respawn' | 'position' | 'held_item_slot' | 'bed' | 'animation' | 'named_entity_spawn' | 'collect' | 'spawn_entity' | 'spawn_entity_living' | 'spawn_entity_painting' | 'spawn_entity_experience_orb' | 'entity_velocity' | 'entity_destroy' | 'entity' | 'rel_entity_move' | 'entity_look' | 'entity_move_look' | 'entity_teleport' | 'entity_head_rotation' | 'entity_status' | 'attach_entity' | 'entity_metadata' | 'entity_effect' | 'remove_entity_effect' | 'experience' | 'update_attributes' | 'map_chunk' | 'multi_block_change' | 'block_change' | 'block_action' | 'block_break_animation' | 'map_chunk_bulk' | 'explosion' | 'world_event' | 'named_sound_effect' | 'world_particles' | 'game_state_change' | 'spawn_entity_weather' | 'open_window' | 'close_window' | 'set_slot' | 'window_items' | 'craft_progress_bar' | 'transaction' | 'update_sign' | 'map' | 'tile_entity_data' | 'open_sign_entity' | 'statistics' | 'player_info' | 'abilities' | 'tab_complete' | 'scoreboard_objective' | 'scoreboard_score' | 'scoreboard_display_objective' | 'scoreboard_team' | 'custom_payload' | 'kick_disconnect';
-    params: any;
-  } | /** 1.8 */ {
-    name: 'keep_alive' | 'login' | 'chat' | 'update_time' | 'entity_equipment' | 'spawn_position' | 'update_health' | 'respawn' | 'position' | 'held_item_slot' | 'bed' | 'animation' | 'named_entity_spawn' | 'collect' | 'spawn_entity' | 'spawn_entity_living' | 'spawn_entity_painting' | 'spawn_entity_experience_orb' | 'entity_velocity' | 'entity_destroy' | 'entity' | 'rel_entity_move' | 'entity_look' | 'entity_move_look' | 'entity_teleport' | 'entity_head_rotation' | 'entity_status' | 'attach_entity' | 'entity_metadata' | 'entity_effect' | 'remove_entity_effect' | 'experience' | 'update_attributes' | 'map_chunk' | 'multi_block_change' | 'block_change' | 'block_action' | 'block_break_animation' | 'map_chunk_bulk' | 'explosion' | 'world_event' | 'named_sound_effect' | 'world_particles' | 'game_state_change' | 'spawn_entity_weather' | 'open_window' | 'close_window' | 'set_slot' | 'window_items' | 'craft_progress_bar' | 'transaction' | 'update_sign' | 'map' | 'tile_entity_data' | 'open_sign_entity' | 'statistics' | 'player_info' | 'abilities' | 'tab_complete' | 'scoreboard_objective' | 'scoreboard_score' | 'scoreboard_display_objective' | 'scoreboard_team' | 'custom_payload' | 'kick_disconnect' | 'difficulty' | 'combat_event' | 'camera' | 'world_border' | 'title' | 'set_compression' | 'playerlist_header' | 'resource_pack_send' | 'update_entity_nbt';
-    params: any;
-  } | /** 1.9 */ {
-    name: 'spawn_entity' | 'spawn_entity_experience_orb' | 'spawn_entity_weather' | 'spawn_entity_living' | 'spawn_entity_painting' | 'named_entity_spawn' | 'animation' | 'statistics' | 'block_break_animation' | 'tile_entity_data' | 'block_action' | 'block_change' | 'boss_bar' | 'difficulty' | 'tab_complete' | 'chat' | 'multi_block_change' | 'transaction' | 'close_window' | 'open_window' | 'window_items' | 'craft_progress_bar' | 'set_slot' | 'set_cooldown' | 'custom_payload' | 'named_sound_effect' | 'kick_disconnect' | 'entity_status' | 'explosion' | 'unload_chunk' | 'game_state_change' | 'keep_alive' | 'map_chunk' | 'world_event' | 'world_particles' | 'login' | 'map' | 'rel_entity_move' | 'entity_move_look' | 'entity_look' | 'entity' | 'vehicle_move' | 'open_sign_entity' | 'abilities' | 'combat_event' | 'player_info' | 'position' | 'bed' | 'entity_destroy' | 'remove_entity_effect' | 'resource_pack_send' | 'respawn' | 'entity_head_rotation' | 'world_border' | 'camera' | 'held_item_slot' | 'scoreboard_display_objective' | 'entity_metadata' | 'attach_entity' | 'entity_velocity' | 'entity_equipment' | 'experience' | 'update_health' | 'scoreboard_objective' | 'set_passengers' | 'teams' | 'scoreboard_score' | 'spawn_position' | 'update_time' | 'title' | 'update_sign' | 'sound_effect' | 'playerlist_header' | 'collect' | 'entity_teleport' | 'entity_update_attributes' | 'entity_effect';
-    params: any;
-  } | /** 1.9.4 */ {
-    name: 'spawn_entity' | 'spawn_entity_experience_orb' | 'spawn_entity_weather' | 'spawn_entity_living' | 'spawn_entity_painting' | 'named_entity_spawn' | 'animation' | 'statistics' | 'block_break_animation' | 'tile_entity_data' | 'block_action' | 'block_change' | 'boss_bar' | 'difficulty' | 'tab_complete' | 'chat' | 'multi_block_change' | 'transaction' | 'close_window' | 'open_window' | 'window_items' | 'craft_progress_bar' | 'set_slot' | 'set_cooldown' | 'custom_payload' | 'named_sound_effect' | 'kick_disconnect' | 'entity_status' | 'explosion' | 'unload_chunk' | 'game_state_change' | 'keep_alive' | 'map_chunk' | 'world_event' | 'world_particles' | 'login' | 'map' | 'rel_entity_move' | 'entity_move_look' | 'entity_look' | 'entity' | 'vehicle_move' | 'open_sign_entity' | 'abilities' | 'combat_event' | 'player_info' | 'position' | 'bed' | 'entity_destroy' | 'remove_entity_effect' | 'resource_pack_send' | 'respawn' | 'entity_head_rotation' | 'world_border' | 'camera' | 'held_item_slot' | 'scoreboard_display_objective' | 'entity_metadata' | 'attach_entity' | 'entity_velocity' | 'entity_equipment' | 'experience' | 'update_health' | 'scoreboard_objective' | 'set_passengers' | 'teams' | 'scoreboard_score' | 'spawn_position' | 'update_time' | 'title' | 'sound_effect' | 'playerlist_header' | 'collect' | 'entity_teleport' | 'entity_update_attributes' | 'entity_effect';
-    params: any;
-  } | /** 1.12 */ {
-    name: 'spawn_entity' | 'spawn_entity_experience_orb' | 'spawn_entity_weather' | 'spawn_entity_living' | 'spawn_entity_painting' | 'named_entity_spawn' | 'animation' | 'statistics' | 'block_break_animation' | 'tile_entity_data' | 'block_action' | 'block_change' | 'boss_bar' | 'difficulty' | 'tab_complete' | 'chat' | 'multi_block_change' | 'transaction' | 'close_window' | 'open_window' | 'window_items' | 'craft_progress_bar' | 'set_slot' | 'set_cooldown' | 'custom_payload' | 'named_sound_effect' | 'kick_disconnect' | 'entity_status' | 'explosion' | 'unload_chunk' | 'game_state_change' | 'keep_alive' | 'map_chunk' | 'world_event' | 'world_particles' | 'login' | 'map' | 'entity' | 'rel_entity_move' | 'entity_move_look' | 'entity_look' | 'vehicle_move' | 'open_sign_entity' | 'abilities' | 'combat_event' | 'player_info' | 'position' | 'bed' | 'unlock_recipes' | 'entity_destroy' | 'remove_entity_effect' | 'resource_pack_send' | 'respawn' | 'entity_head_rotation' | 'select_advancement_tab' | 'world_border' | 'camera' | 'held_item_slot' | 'scoreboard_display_objective' | 'entity_metadata' | 'attach_entity' | 'entity_velocity' | 'entity_equipment' | 'experience' | 'update_health' | 'scoreboard_objective' | 'set_passengers' | 'teams' | 'scoreboard_score' | 'spawn_position' | 'update_time' | 'title' | 'sound_effect' | 'playerlist_header' | 'collect' | 'entity_teleport' | 'advancements' | 'entity_update_attributes' | 'entity_effect';
-    params: any;
-  } | /** 1.12.1 */ {
-    name: 'spawn_entity' | 'spawn_entity_experience_orb' | 'spawn_entity_weather' | 'spawn_entity_living' | 'spawn_entity_painting' | 'named_entity_spawn' | 'animation' | 'statistics' | 'block_break_animation' | 'tile_entity_data' | 'block_action' | 'block_change' | 'boss_bar' | 'difficulty' | 'tab_complete' | 'chat' | 'multi_block_change' | 'transaction' | 'close_window' | 'open_window' | 'window_items' | 'craft_progress_bar' | 'set_slot' | 'set_cooldown' | 'custom_payload' | 'named_sound_effect' | 'kick_disconnect' | 'entity_status' | 'explosion' | 'unload_chunk' | 'game_state_change' | 'keep_alive' | 'map_chunk' | 'world_event' | 'world_particles' | 'login' | 'map' | 'entity' | 'rel_entity_move' | 'entity_move_look' | 'entity_look' | 'vehicle_move' | 'open_sign_entity' | 'craft_recipe_response' | 'abilities' | 'combat_event' | 'player_info' | 'position' | 'bed' | 'unlock_recipes' | 'entity_destroy' | 'remove_entity_effect' | 'resource_pack_send' | 'respawn' | 'entity_head_rotation' | 'select_advancement_tab' | 'world_border' | 'camera' | 'held_item_slot' | 'scoreboard_display_objective' | 'entity_metadata' | 'attach_entity' | 'entity_velocity' | 'entity_equipment' | 'experience' | 'update_health' | 'scoreboard_objective' | 'set_passengers' | 'teams' | 'scoreboard_score' | 'spawn_position' | 'update_time' | 'title' | 'sound_effect' | 'playerlist_header' | 'collect' | 'entity_teleport' | 'advancements' | 'entity_update_attributes' | 'entity_effect';
-    params: any;
-  } | /** 1.13 */ {
-    name: 'spawn_entity' | 'spawn_entity_experience_orb' | 'spawn_entity_weather' | 'spawn_entity_living' | 'spawn_entity_painting' | 'named_entity_spawn' | 'animation' | 'statistics' | 'block_break_animation' | 'tile_entity_data' | 'block_action' | 'block_change' | 'boss_bar' | 'difficulty' | 'chat' | 'multi_block_change' | 'tab_complete' | 'declare_commands' | 'transaction' | 'close_window' | 'open_window' | 'window_items' | 'craft_progress_bar' | 'set_slot' | 'set_cooldown' | 'custom_payload' | 'named_sound_effect' | 'kick_disconnect' | 'entity_status' | 'nbt_query_response' | 'explosion' | 'unload_chunk' | 'game_state_change' | 'keep_alive' | 'map_chunk' | 'world_event' | 'world_particles' | 'login' | 'map' | 'entity' | 'rel_entity_move' | 'entity_move_look' | 'entity_look' | 'vehicle_move' | 'open_sign_entity' | 'craft_recipe_response' | 'abilities' | 'combat_event' | 'player_info' | 'face_player' | 'position' | 'bed' | 'unlock_recipes' | 'entity_destroy' | 'remove_entity_effect' | 'resource_pack_send' | 'respawn' | 'entity_head_rotation' | 'select_advancement_tab' | 'world_border' | 'camera' | 'held_item_slot' | 'scoreboard_display_objective' | 'entity_metadata' | 'attach_entity' | 'entity_velocity' | 'entity_equipment' | 'experience' | 'update_health' | 'scoreboard_objective' | 'set_passengers' | 'teams' | 'scoreboard_score' | 'spawn_position' | 'update_time' | 'title' | 'stop_sound' | 'sound_effect' | 'playerlist_header' | 'collect' | 'entity_teleport' | 'advancements' | 'entity_update_attributes' | 'entity_effect' | 'declare_recipes' | 'tags';
-    params: any;
-  } | /** 1.14 */ {
-    name: 'spawn_entity' | 'spawn_entity_experience_orb' | 'spawn_entity_weather' | 'spawn_entity_living' | 'spawn_entity_painting' | 'named_entity_spawn' | 'animation' | 'statistics' | 'block_break_animation' | 'tile_entity_data' | 'block_action' | 'block_change' | 'boss_bar' | 'difficulty' | 'chat' | 'multi_block_change' | 'tab_complete' | 'declare_commands' | 'transaction' | 'close_window' | 'window_items' | 'craft_progress_bar' | 'set_slot' | 'set_cooldown' | 'custom_payload' | 'named_sound_effect' | 'kick_disconnect' | 'entity_status' | 'explosion' | 'unload_chunk' | 'game_state_change' | 'open_horse_window' | 'keep_alive' | 'map_chunk' | 'world_event' | 'world_particles' | 'update_light' | 'login' | 'map' | 'trade_list' | 'rel_entity_move' | 'entity_move_look' | 'entity_look' | 'entity' | 'vehicle_move' | 'open_book' | 'open_window' | 'open_sign_entity' | 'craft_recipe_response' | 'abilities' | 'combat_event' | 'player_info' | 'face_player' | 'position' | 'unlock_recipes' | 'entity_destroy' | 'remove_entity_effect' | 'resource_pack_send' | 'respawn' | 'entity_head_rotation' | 'select_advancement_tab' | 'world_border' | 'camera' | 'held_item_slot' | 'update_view_position' | 'update_view_distance' | 'scoreboard_display_objective' | 'entity_metadata' | 'attach_entity' | 'entity_velocity' | 'entity_equipment' | 'experience' | 'update_health' | 'scoreboard_objective' | 'set_passengers' | 'teams' | 'scoreboard_score' | 'spawn_position' | 'update_time' | 'title' | 'entity_sound_effect' | 'sound_effect' | 'stop_sound' | 'playerlist_header' | 'nbt_query_response' | 'collect' | 'entity_teleport' | 'advancements' | 'entity_update_attributes' | 'entity_effect' | 'declare_recipes' | 'tags';
-    params: any;
-  } | /** 1.14.4 */ {
-    name: 'spawn_entity' | 'spawn_entity_experience_orb' | 'spawn_entity_weather' | 'spawn_entity_living' | 'spawn_entity_painting' | 'named_entity_spawn' | 'animation' | 'statistics' | 'block_break_animation' | 'tile_entity_data' | 'block_action' | 'block_change' | 'boss_bar' | 'difficulty' | 'chat' | 'multi_block_change' | 'tab_complete' | 'declare_commands' | 'transaction' | 'close_window' | 'window_items' | 'craft_progress_bar' | 'set_slot' | 'set_cooldown' | 'custom_payload' | 'named_sound_effect' | 'kick_disconnect' | 'entity_status' | 'explosion' | 'unload_chunk' | 'game_state_change' | 'open_horse_window' | 'keep_alive' | 'map_chunk' | 'world_event' | 'world_particles' | 'update_light' | 'login' | 'map' | 'trade_list' | 'rel_entity_move' | 'entity_move_look' | 'entity_look' | 'entity' | 'vehicle_move' | 'open_book' | 'open_window' | 'open_sign_entity' | 'craft_recipe_response' | 'abilities' | 'combat_event' | 'player_info' | 'face_player' | 'position' | 'unlock_recipes' | 'entity_destroy' | 'remove_entity_effect' | 'resource_pack_send' | 'respawn' | 'entity_head_rotation' | 'select_advancement_tab' | 'world_border' | 'camera' | 'held_item_slot' | 'update_view_position' | 'update_view_distance' | 'scoreboard_display_objective' | 'entity_metadata' | 'attach_entity' | 'entity_velocity' | 'entity_equipment' | 'experience' | 'update_health' | 'scoreboard_objective' | 'set_passengers' | 'teams' | 'scoreboard_score' | 'spawn_position' | 'update_time' | 'title' | 'entity_sound_effect' | 'sound_effect' | 'stop_sound' | 'playerlist_header' | 'nbt_query_response' | 'collect' | 'entity_teleport' | 'advancements' | 'entity_update_attributes' | 'entity_effect' | 'declare_recipes' | 'tags' | 'acknowledge_player_digging';
-    params: any;
-  } | /** 1.15 */ {
-    name: 'spawn_entity' | 'spawn_entity_experience_orb' | 'spawn_entity_weather' | 'spawn_entity_living' | 'spawn_entity_painting' | 'named_entity_spawn' | 'animation' | 'statistics' | 'acknowledge_player_digging' | 'block_break_animation' | 'tile_entity_data' | 'block_action' | 'block_change' | 'boss_bar' | 'difficulty' | 'chat' | 'multi_block_change' | 'tab_complete' | 'declare_commands' | 'transaction' | 'close_window' | 'window_items' | 'craft_progress_bar' | 'set_slot' | 'set_cooldown' | 'custom_payload' | 'named_sound_effect' | 'kick_disconnect' | 'entity_status' | 'explosion' | 'unload_chunk' | 'game_state_change' | 'open_horse_window' | 'keep_alive' | 'map_chunk' | 'world_event' | 'world_particles' | 'update_light' | 'login' | 'map' | 'trade_list' | 'rel_entity_move' | 'entity_move_look' | 'entity_look' | 'entity' | 'vehicle_move' | 'open_book' | 'open_window' | 'open_sign_entity' | 'craft_recipe_response' | 'abilities' | 'combat_event' | 'player_info' | 'face_player' | 'position' | 'unlock_recipes' | 'entity_destroy' | 'remove_entity_effect' | 'resource_pack_send' | 'respawn' | 'entity_head_rotation' | 'select_advancement_tab' | 'world_border' | 'camera' | 'held_item_slot' | 'update_view_position' | 'update_view_distance' | 'scoreboard_display_objective' | 'entity_metadata' | 'attach_entity' | 'entity_velocity' | 'entity_equipment' | 'experience' | 'update_health' | 'scoreboard_objective' | 'set_passengers' | 'teams' | 'scoreboard_score' | 'spawn_position' | 'update_time' | 'title' | 'entity_sound_effect' | 'sound_effect' | 'stop_sound' | 'playerlist_header' | 'nbt_query_response' | 'collect' | 'entity_teleport' | 'advancements' | 'entity_update_attributes' | 'entity_effect' | 'declare_recipes' | 'tags';
-    params: any;
-  } | /** 1.16 */ {
-    name: 'spawn_entity' | 'spawn_entity_experience_orb' | 'spawn_entity_living' | 'spawn_entity_painting' | 'named_entity_spawn' | 'animation' | 'statistics' | 'acknowledge_player_digging' | 'block_break_animation' | 'tile_entity_data' | 'block_action' | 'block_change' | 'boss_bar' | 'difficulty' | 'chat' | 'multi_block_change' | 'tab_complete' | 'declare_commands' | 'transaction' | 'close_window' | 'window_items' | 'craft_progress_bar' | 'set_slot' | 'set_cooldown' | 'custom_payload' | 'named_sound_effect' | 'kick_disconnect' | 'entity_status' | 'explosion' | 'unload_chunk' | 'game_state_change' | 'open_horse_window' | 'keep_alive' | 'map_chunk' | 'world_event' | 'world_particles' | 'update_light' | 'login' | 'map' | 'trade_list' | 'rel_entity_move' | 'entity_move_look' | 'entity_look' | 'entity' | 'vehicle_move' | 'open_book' | 'open_window' | 'open_sign_entity' | 'craft_recipe_response' | 'abilities' | 'combat_event' | 'player_info' | 'face_player' | 'position' | 'unlock_recipes' | 'entity_destroy' | 'remove_entity_effect' | 'resource_pack_send' | 'respawn' | 'entity_head_rotation' | 'select_advancement_tab' | 'world_border' | 'camera' | 'held_item_slot' | 'update_view_position' | 'update_view_distance' | 'spawn_position' | 'scoreboard_display_objective' | 'entity_metadata' | 'attach_entity' | 'entity_velocity' | 'entity_equipment' | 'experience' | 'update_health' | 'scoreboard_objective' | 'set_passengers' | 'teams' | 'scoreboard_score' | 'update_time' | 'title' | 'entity_sound_effect' | 'sound_effect' | 'stop_sound' | 'playerlist_header' | 'nbt_query_response' | 'collect' | 'entity_teleport' | 'advancements' | 'entity_update_attributes' | 'entity_effect' | 'declare_recipes' | 'tags';
-    params: any;
-  } | /** 1.16.2 */ {
-    name: 'spawn_entity' | 'spawn_entity_experience_orb' | 'spawn_entity_living' | 'spawn_entity_painting' | 'named_entity_spawn' | 'animation' | 'statistics' | 'acknowledge_player_digging' | 'block_break_animation' | 'tile_entity_data' | 'block_action' | 'block_change' | 'boss_bar' | 'difficulty' | 'chat' | 'tab_complete' | 'declare_commands' | 'transaction' | 'close_window' | 'window_items' | 'craft_progress_bar' | 'set_slot' | 'set_cooldown' | 'custom_payload' | 'named_sound_effect' | 'kick_disconnect' | 'entity_status' | 'explosion' | 'unload_chunk' | 'game_state_change' | 'open_horse_window' | 'keep_alive' | 'map_chunk' | 'world_event' | 'world_particles' | 'update_light' | 'login' | 'map' | 'trade_list' | 'rel_entity_move' | 'entity_move_look' | 'entity_look' | 'entity' | 'vehicle_move' | 'open_book' | 'open_window' | 'open_sign_entity' | 'craft_recipe_response' | 'abilities' | 'combat_event' | 'player_info' | 'face_player' | 'position' | 'unlock_recipes' | 'entity_destroy' | 'remove_entity_effect' | 'resource_pack_send' | 'respawn' | 'entity_head_rotation' | 'multi_block_change' | 'select_advancement_tab' | 'world_border' | 'camera' | 'held_item_slot' | 'update_view_position' | 'update_view_distance' | 'spawn_position' | 'scoreboard_display_objective' | 'entity_metadata' | 'attach_entity' | 'entity_velocity' | 'entity_equipment' | 'experience' | 'update_health' | 'scoreboard_objective' | 'set_passengers' | 'teams' | 'scoreboard_score' | 'update_time' | 'title' | 'entity_sound_effect' | 'sound_effect' | 'stop_sound' | 'playerlist_header' | 'nbt_query_response' | 'collect' | 'entity_teleport' | 'advancements' | 'entity_update_attributes' | 'entity_effect' | 'declare_recipes' | 'tags';
-    params: any;
-  } | /** 1.17 */ {
-    name: 'spawn_entity' | 'spawn_entity_experience_orb' | 'spawn_entity_living' | 'spawn_entity_painting' | 'named_entity_spawn' | 'sculk_vibration_signal' | 'animation' | 'statistics' | 'acknowledge_player_digging' | 'block_break_animation' | 'tile_entity_data' | 'block_action' | 'block_change' | 'boss_bar' | 'difficulty' | 'chat' | 'clear_titles' | 'tab_complete' | 'declare_commands' | 'close_window' | 'window_items' | 'craft_progress_bar' | 'set_slot' | 'set_cooldown' | 'custom_payload' | 'named_sound_effect' | 'kick_disconnect' | 'entity_status' | 'explosion' | 'unload_chunk' | 'game_state_change' | 'open_horse_window' | 'initialize_world_border' | 'keep_alive' | 'map_chunk' | 'world_event' | 'world_particles' | 'update_light' | 'login' | 'map' | 'trade_list' | 'rel_entity_move' | 'entity_move_look' | 'entity_look' | 'vehicle_move' | 'open_book' | 'open_window' | 'open_sign_entity' | 'ping' | 'craft_recipe_response' | 'abilities' | 'end_combat_event' | 'enter_combat_event' | 'death_combat_event' | 'player_info' | 'face_player' | 'position' | 'unlock_recipes' | 'destroy_entity' | 'remove_entity_effect' | 'resource_pack_send' | 'respawn' | 'entity_head_rotation' | 'multi_block_change' | 'select_advancement_tab' | 'action_bar' | 'world_border_center' | 'world_border_lerp_size' | 'world_border_size' | 'world_border_warning_delay' | 'world_border_warning_reach' | 'camera' | 'held_item_slot' | 'update_view_position' | 'update_view_distance' | 'spawn_position' | 'scoreboard_display_objective' | 'entity_metadata' | 'attach_entity' | 'entity_velocity' | 'entity_equipment' | 'experience' | 'update_health' | 'scoreboard_objective' | 'set_passengers' | 'teams' | 'scoreboard_score' | 'set_title_subtitle' | 'update_time' | 'set_title_text' | 'set_title_time' | 'entity_sound_effect' | 'sound_effect' | 'stop_sound' | 'playerlist_header' | 'nbt_query_response' | 'collect' | 'entity_teleport' | 'advancements' | 'entity_update_attributes' | 'entity_effect' | 'declare_recipes' | 'tags';
-    params: any;
-  } | /** 1.17.1 */ {
-    name: 'spawn_entity' | 'spawn_entity_experience_orb' | 'spawn_entity_living' | 'spawn_entity_painting' | 'named_entity_spawn' | 'sculk_vibration_signal' | 'animation' | 'statistics' | 'acknowledge_player_digging' | 'block_break_animation' | 'tile_entity_data' | 'block_action' | 'block_change' | 'boss_bar' | 'difficulty' | 'chat' | 'clear_titles' | 'tab_complete' | 'declare_commands' | 'close_window' | 'window_items' | 'craft_progress_bar' | 'set_slot' | 'set_cooldown' | 'custom_payload' | 'named_sound_effect' | 'kick_disconnect' | 'entity_status' | 'explosion' | 'unload_chunk' | 'game_state_change' | 'open_horse_window' | 'initialize_world_border' | 'keep_alive' | 'map_chunk' | 'world_event' | 'world_particles' | 'update_light' | 'login' | 'map' | 'trade_list' | 'rel_entity_move' | 'entity_move_look' | 'entity_look' | 'vehicle_move' | 'open_book' | 'open_window' | 'open_sign_entity' | 'ping' | 'craft_recipe_response' | 'abilities' | 'end_combat_event' | 'enter_combat_event' | 'death_combat_event' | 'player_info' | 'face_player' | 'position' | 'unlock_recipes' | 'entity_destroy' | 'remove_entity_effect' | 'resource_pack_send' | 'respawn' | 'entity_head_rotation' | 'multi_block_change' | 'select_advancement_tab' | 'action_bar' | 'world_border_center' | 'world_border_lerp_size' | 'world_border_size' | 'world_border_warning_delay' | 'world_border_warning_reach' | 'camera' | 'held_item_slot' | 'update_view_position' | 'update_view_distance' | 'spawn_position' | 'scoreboard_display_objective' | 'entity_metadata' | 'attach_entity' | 'entity_velocity' | 'entity_equipment' | 'experience' | 'update_health' | 'scoreboard_objective' | 'set_passengers' | 'teams' | 'scoreboard_score' | 'set_title_subtitle' | 'update_time' | 'set_title_text' | 'set_title_time' | 'entity_sound_effect' | 'sound_effect' | 'stop_sound' | 'playerlist_header' | 'nbt_query_response' | 'collect' | 'entity_teleport' | 'advancements' | 'entity_update_attributes' | 'entity_effect' | 'declare_recipes' | 'tags';
-    params: any;
-  } | /** 1.18 */ {
-    name: 'spawn_entity' | 'spawn_entity_experience_orb' | 'spawn_entity_living' | 'spawn_entity_painting' | 'named_entity_spawn' | 'sculk_vibration_signal' | 'animation' | 'statistics' | 'acknowledge_player_digging' | 'block_break_animation' | 'tile_entity_data' | 'block_action' | 'block_change' | 'boss_bar' | 'difficulty' | 'chat' | 'clear_titles' | 'tab_complete' | 'declare_commands' | 'close_window' | 'window_items' | 'craft_progress_bar' | 'set_slot' | 'set_cooldown' | 'custom_payload' | 'named_sound_effect' | 'kick_disconnect' | 'entity_status' | 'explosion' | 'unload_chunk' | 'game_state_change' | 'open_horse_window' | 'initialize_world_border' | 'keep_alive' | 'map_chunk' | 'world_event' | 'world_particles' | 'update_light' | 'login' | 'map' | 'trade_list' | 'rel_entity_move' | 'entity_move_look' | 'entity_look' | 'vehicle_move' | 'open_book' | 'open_window' | 'open_sign_entity' | 'ping' | 'craft_recipe_response' | 'abilities' | 'end_combat_event' | 'enter_combat_event' | 'death_combat_event' | 'player_info' | 'face_player' | 'position' | 'unlock_recipes' | 'entity_destroy' | 'remove_entity_effect' | 'resource_pack_send' | 'respawn' | 'entity_head_rotation' | 'multi_block_change' | 'select_advancement_tab' | 'action_bar' | 'world_border_center' | 'world_border_lerp_size' | 'world_border_size' | 'world_border_warning_delay' | 'world_border_warning_reach' | 'camera' | 'held_item_slot' | 'update_view_position' | 'update_view_distance' | 'spawn_position' | 'scoreboard_display_objective' | 'entity_metadata' | 'attach_entity' | 'entity_velocity' | 'entity_equipment' | 'experience' | 'update_health' | 'scoreboard_objective' | 'set_passengers' | 'teams' | 'scoreboard_score' | 'simulation_distance' | 'set_title_subtitle' | 'update_time' | 'set_title_text' | 'set_title_time' | 'entity_sound_effect' | 'sound_effect' | 'stop_sound' | 'playerlist_header' | 'nbt_query_response' | 'collect' | 'entity_teleport' | 'advancements' | 'entity_update_attributes' | 'entity_effect' | 'declare_recipes' | 'tags';
-    params: any;
-  } | /** 1.19 */ {
-    name: 'spawn_entity' | 'spawn_entity_experience_orb' | 'named_entity_spawn' | 'animation' | 'statistics' | 'acknowledge_player_digging' | 'block_break_animation' | 'tile_entity_data' | 'block_action' | 'block_change' | 'boss_bar' | 'difficulty' | 'chat_preview' | 'clear_titles' | 'tab_complete' | 'declare_commands' | 'close_window' | 'window_items' | 'craft_progress_bar' | 'set_slot' | 'set_cooldown' | 'custom_payload' | 'named_sound_effect' | 'kick_disconnect' | 'entity_status' | 'explosion' | 'unload_chunk' | 'game_state_change' | 'open_horse_window' | 'initialize_world_border' | 'keep_alive' | 'map_chunk' | 'world_event' | 'world_particles' | 'update_light' | 'login' | 'map' | 'trade_list' | 'rel_entity_move' | 'entity_move_look' | 'entity_look' | 'vehicle_move' | 'open_book' | 'open_window' | 'open_sign_entity' | 'ping' | 'craft_recipe_response' | 'abilities' | 'player_chat' | 'end_combat_event' | 'enter_combat_event' | 'death_combat_event' | 'player_info' | 'face_player' | 'position' | 'unlock_recipes' | 'entity_destroy' | 'remove_entity_effect' | 'resource_pack_send' | 'respawn' | 'entity_head_rotation' | 'multi_block_change' | 'select_advancement_tab' | 'server_data' | 'action_bar' | 'world_border_center' | 'world_border_lerp_size' | 'world_border_size' | 'world_border_warning_delay' | 'world_border_warning_reach' | 'camera' | 'held_item_slot' | 'update_view_position' | 'update_view_distance' | 'spawn_position' | 'should_display_chat_preview' | 'scoreboard_display_objective' | 'entity_metadata' | 'attach_entity' | 'entity_velocity' | 'entity_equipment' | 'experience' | 'update_health' | 'scoreboard_objective' | 'set_passengers' | 'teams' | 'scoreboard_score' | 'simulation_distance' | 'set_title_subtitle' | 'update_time' | 'set_title_text' | 'set_title_time' | 'entity_sound_effect' | 'sound_effect' | 'stop_sound' | 'system_chat' | 'playerlist_header' | 'nbt_query_response' | 'collect' | 'entity_teleport' | 'advancements' | 'entity_update_attributes' | 'entity_effect' | 'declare_recipes' | 'tags';
-    params: any;
-  } | /** 1.19.2 */ {
-    name: 'spawn_entity' | 'spawn_entity_experience_orb' | 'named_entity_spawn' | 'animation' | 'statistics' | 'acknowledge_player_digging' | 'block_break_animation' | 'tile_entity_data' | 'block_action' | 'block_change' | 'boss_bar' | 'difficulty' | 'chat_preview' | 'clear_titles' | 'tab_complete' | 'declare_commands' | 'close_window' | 'window_items' | 'craft_progress_bar' | 'set_slot' | 'set_cooldown' | 'chat_suggestions' | 'custom_payload' | 'named_sound_effect' | 'hide_message' | 'kick_disconnect' | 'entity_status' | 'explosion' | 'unload_chunk' | 'game_state_change' | 'open_horse_window' | 'initialize_world_border' | 'keep_alive' | 'map_chunk' | 'world_event' | 'world_particles' | 'update_light' | 'login' | 'map' | 'trade_list' | 'rel_entity_move' | 'entity_move_look' | 'entity_look' | 'vehicle_move' | 'open_book' | 'open_window' | 'open_sign_entity' | 'ping' | 'craft_recipe_response' | 'abilities' | 'message_header' | 'player_chat' | 'end_combat_event' | 'enter_combat_event' | 'death_combat_event' | 'player_info' | 'face_player' | 'position' | 'unlock_recipes' | 'entity_destroy' | 'remove_entity_effect' | 'resource_pack_send' | 'respawn' | 'entity_head_rotation' | 'multi_block_change' | 'select_advancement_tab' | 'server_data' | 'action_bar' | 'world_border_center' | 'world_border_lerp_size' | 'world_border_size' | 'world_border_warning_delay' | 'world_border_warning_reach' | 'camera' | 'held_item_slot' | 'update_view_position' | 'update_view_distance' | 'spawn_position' | 'should_display_chat_preview' | 'scoreboard_display_objective' | 'entity_metadata' | 'attach_entity' | 'entity_velocity' | 'entity_equipment' | 'experience' | 'update_health' | 'scoreboard_objective' | 'set_passengers' | 'teams' | 'scoreboard_score' | 'simulation_distance' | 'set_title_subtitle' | 'update_time' | 'set_title_text' | 'set_title_time' | 'entity_sound_effect' | 'sound_effect' | 'stop_sound' | 'system_chat' | 'playerlist_header' | 'nbt_query_response' | 'collect' | 'entity_teleport' | 'advancements' | 'entity_update_attributes' | 'entity_effect' | 'declare_recipes' | 'tags';
-    params: any;
-  } | /** 1.19.3 */ {
-    name: 'spawn_entity' | 'spawn_entity_experience_orb' | 'named_entity_spawn' | 'animation' | 'statistics' | 'acknowledge_player_digging' | 'block_break_animation' | 'tile_entity_data' | 'block_action' | 'block_change' | 'boss_bar' | 'difficulty' | 'clear_titles' | 'tab_complete' | 'declare_commands' | 'close_window' | 'window_items' | 'craft_progress_bar' | 'set_slot' | 'set_cooldown' | 'chat_suggestions' | 'custom_payload' | 'hide_message' | 'kick_disconnect' | 'profileless_chat' | 'entity_status' | 'explosion' | 'unload_chunk' | 'game_state_change' | 'open_horse_window' | 'initialize_world_border' | 'keep_alive' | 'map_chunk' | 'world_event' | 'world_particles' | 'update_light' | 'login' | 'map' | 'trade_list' | 'rel_entity_move' | 'entity_move_look' | 'entity_look' | 'vehicle_move' | 'open_book' | 'open_window' | 'open_sign_entity' | 'ping' | 'craft_recipe_response' | 'abilities' | 'player_chat' | 'end_combat_event' | 'enter_combat_event' | 'death_combat_event' | 'player_remove' | 'player_info' | 'face_player' | 'position' | 'unlock_recipes' | 'entity_destroy' | 'remove_entity_effect' | 'resource_pack_send' | 'respawn' | 'entity_head_rotation' | 'multi_block_change' | 'select_advancement_tab' | 'server_data' | 'action_bar' | 'world_border_center' | 'world_border_lerp_size' | 'world_border_size' | 'world_border_warning_delay' | 'world_border_warning_reach' | 'camera' | 'held_item_slot' | 'update_view_position' | 'update_view_distance' | 'spawn_position' | 'scoreboard_display_objective' | 'entity_metadata' | 'attach_entity' | 'entity_velocity' | 'entity_equipment' | 'experience' | 'update_health' | 'scoreboard_objective' | 'set_passengers' | 'teams' | 'scoreboard_score' | 'simulation_distance' | 'set_title_subtitle' | 'update_time' | 'set_title_text' | 'set_title_time' | 'entity_sound_effect' | 'sound_effect' | 'stop_sound' | 'system_chat' | 'playerlist_header' | 'nbt_query_response' | 'collect' | 'entity_teleport' | 'advancements' | 'entity_update_attributes' | 'feature_flags' | 'entity_effect' | 'declare_recipes' | 'tags';
-    params: any;
-  } | /** 1.19.4 */ {
-    name: 'bundle_delimiter' | 'spawn_entity' | 'spawn_entity_experience_orb' | 'named_entity_spawn' | 'animation' | 'statistics' | 'acknowledge_player_digging' | 'block_break_animation' | 'tile_entity_data' | 'block_action' | 'block_change' | 'boss_bar' | 'difficulty' | 'chunk_biomes' | 'clear_titles' | 'tab_complete' | 'declare_commands' | 'close_window' | 'window_items' | 'craft_progress_bar' | 'set_slot' | 'set_cooldown' | 'chat_suggestions' | 'custom_payload' | 'damage_event' | 'hide_message' | 'kick_disconnect' | 'profileless_chat' | 'entity_status' | 'explosion' | 'unload_chunk' | 'game_state_change' | 'open_horse_window' | 'hurt_animation' | 'initialize_world_border' | 'keep_alive' | 'map_chunk' | 'world_event' | 'world_particles' | 'update_light' | 'login' | 'map' | 'trade_list' | 'rel_entity_move' | 'entity_move_look' | 'entity_look' | 'vehicle_move' | 'open_book' | 'open_window' | 'open_sign_entity' | 'ping' | 'craft_recipe_response' | 'abilities' | 'player_chat' | 'end_combat_event' | 'enter_combat_event' | 'death_combat_event' | 'player_remove' | 'player_info' | 'face_player' | 'position' | 'unlock_recipes' | 'entity_destroy' | 'remove_entity_effect' | 'resource_pack_send' | 'respawn' | 'entity_head_rotation' | 'multi_block_change' | 'select_advancement_tab' | 'server_data' | 'action_bar' | 'world_border_center' | 'world_border_lerp_size' | 'world_border_size' | 'world_border_warning_delay' | 'world_border_warning_reach' | 'camera' | 'held_item_slot' | 'update_view_position' | 'update_view_distance' | 'spawn_position' | 'scoreboard_display_objective' | 'entity_metadata' | 'attach_entity' | 'entity_velocity' | 'entity_equipment' | 'experience' | 'update_health' | 'scoreboard_objective' | 'set_passengers' | 'teams' | 'scoreboard_score' | 'simulation_distance' | 'set_title_subtitle' | 'update_time' | 'set_title_text' | 'set_title_time' | 'entity_sound_effect' | 'sound_effect' | 'stop_sound' | 'system_chat' | 'playerlist_header' | 'nbt_query_response' | 'collect' | 'entity_teleport' | 'advancements' | 'entity_update_attributes' | 'feature_flags' | 'entity_effect' | 'declare_recipes' | 'tags';
-    params: undefined | any;
-  } | /** 1.20.2 */ {
-    name: 'bundle_delimiter' | 'spawn_entity' | 'spawn_entity_experience_orb' | 'animation' | 'statistics' | 'acknowledge_player_digging' | 'block_break_animation' | 'tile_entity_data' | 'block_action' | 'block_change' | 'boss_bar' | 'difficulty' | 'chunk_batch_finished' | 'chunk_batch_start' | 'chunk_biomes' | 'clear_titles' | 'tab_complete' | 'declare_commands' | 'close_window' | 'window_items' | 'craft_progress_bar' | 'set_slot' | 'set_cooldown' | 'chat_suggestions' | 'custom_payload' | 'damage_event' | 'hide_message' | 'kick_disconnect' | 'profileless_chat' | 'entity_status' | 'explosion' | 'unload_chunk' | 'game_state_change' | 'open_horse_window' | 'hurt_animation' | 'initialize_world_border' | 'keep_alive' | 'map_chunk' | 'world_event' | 'world_particles' | 'update_light' | 'login' | 'map' | 'trade_list' | 'rel_entity_move' | 'entity_move_look' | 'entity_look' | 'vehicle_move' | 'open_book' | 'open_window' | 'open_sign_entity' | 'ping' | 'ping_response' | 'craft_recipe_response' | 'abilities' | 'player_chat' | 'end_combat_event' | 'enter_combat_event' | 'death_combat_event' | 'player_remove' | 'player_info' | 'face_player' | 'position' | 'unlock_recipes' | 'entity_destroy' | 'remove_entity_effect' | 'resource_pack_send' | 'respawn' | 'entity_head_rotation' | 'multi_block_change' | 'select_advancement_tab' | 'server_data' | 'action_bar' | 'world_border_center' | 'world_border_lerp_size' | 'world_border_size' | 'world_border_warning_delay' | 'world_border_warning_reach' | 'camera' | 'held_item_slot' | 'update_view_position' | 'update_view_distance' | 'spawn_position' | 'scoreboard_display_objective' | 'entity_metadata' | 'attach_entity' | 'entity_velocity' | 'entity_equipment' | 'experience' | 'update_health' | 'scoreboard_objective' | 'set_passengers' | 'teams' | 'scoreboard_score' | 'simulation_distance' | 'set_title_subtitle' | 'update_time' | 'set_title_text' | 'set_title_time' | 'entity_sound_effect' | 'sound_effect' | 'start_configuration' | 'stop_sound' | 'system_chat' | 'playerlist_header' | 'nbt_query_response' | 'collect' | 'entity_teleport' | 'advancements' | 'entity_update_attributes' | 'entity_effect' | 'declare_recipes' | 'tags';
-    params: undefined | any;
-  } | /** 1.20.3 */ {
-    name: 'bundle_delimiter' | 'spawn_entity' | 'spawn_entity_experience_orb' | 'animation' | 'statistics' | 'acknowledge_player_digging' | 'block_break_animation' | 'tile_entity_data' | 'block_action' | 'block_change' | 'boss_bar' | 'difficulty' | 'chunk_batch_finished' | 'chunk_batch_start' | 'chunk_biomes' | 'clear_titles' | 'tab_complete' | 'declare_commands' | 'close_window' | 'window_items' | 'craft_progress_bar' | 'set_slot' | 'set_cooldown' | 'chat_suggestions' | 'custom_payload' | 'damage_event' | 'hide_message' | 'kick_disconnect' | 'profileless_chat' | 'entity_status' | 'explosion' | 'unload_chunk' | 'game_state_change' | 'open_horse_window' | 'hurt_animation' | 'initialize_world_border' | 'keep_alive' | 'map_chunk' | 'world_event' | 'world_particles' | 'update_light' | 'login' | 'map' | 'trade_list' | 'rel_entity_move' | 'entity_move_look' | 'entity_look' | 'vehicle_move' | 'open_book' | 'open_window' | 'open_sign_entity' | 'ping' | 'ping_response' | 'craft_recipe_response' | 'abilities' | 'player_chat' | 'end_combat_event' | 'enter_combat_event' | 'death_combat_event' | 'player_remove' | 'player_info' | 'face_player' | 'position' | 'unlock_recipes' | 'entity_destroy' | 'remove_entity_effect' | 'reset_score' | 'remove_resource_pack' | 'add_resource_pack' | 'respawn' | 'entity_head_rotation' | 'multi_block_change' | 'select_advancement_tab' | 'server_data' | 'action_bar' | 'world_border_center' | 'world_border_lerp_size' | 'world_border_size' | 'world_border_warning_delay' | 'world_border_warning_reach' | 'camera' | 'held_item_slot' | 'update_view_position' | 'update_view_distance' | 'spawn_position' | 'scoreboard_display_objective' | 'entity_metadata' | 'attach_entity' | 'entity_velocity' | 'entity_equipment' | 'experience' | 'update_health' | 'scoreboard_objective' | 'set_passengers' | 'teams' | 'scoreboard_score' | 'simulation_distance' | 'set_title_subtitle' | 'update_time' | 'set_title_text' | 'set_title_time' | 'entity_sound_effect' | 'sound_effect' | 'start_configuration' | 'stop_sound' | 'system_chat' | 'playerlist_header' | 'nbt_query_response' | 'collect' | 'entity_teleport' | 'set_ticking_state' | 'step_tick' | 'advancements' | 'entity_update_attributes' | 'entity_effect' | 'declare_recipes' | 'tags';
-    params: undefined | any;
-  } | /** 1.20.5 */ {
-    name: 'bundle_delimiter' | 'spawn_entity' | 'spawn_entity_experience_orb' | 'animation' | 'statistics' | 'acknowledge_player_digging' | 'block_break_animation' | 'tile_entity_data' | 'block_action' | 'block_change' | 'boss_bar' | 'difficulty' | 'chunk_batch_finished' | 'chunk_batch_start' | 'chunk_biomes' | 'clear_titles' | 'tab_complete' | 'declare_commands' | 'close_window' | 'window_items' | 'craft_progress_bar' | 'set_slot' | 'cookie_request' | 'set_cooldown' | 'chat_suggestions' | 'custom_payload' | 'damage_event' | 'debug_sample' | 'hide_message' | 'kick_disconnect' | 'profileless_chat' | 'entity_status' | 'explosion' | 'unload_chunk' | 'game_state_change' | 'open_horse_window' | 'hurt_animation' | 'initialize_world_border' | 'keep_alive' | 'map_chunk' | 'world_event' | 'world_particles' | 'update_light' | 'login' | 'map' | 'trade_list' | 'rel_entity_move' | 'entity_move_look' | 'entity_look' | 'vehicle_move' | 'open_book' | 'open_window' | 'open_sign_entity' | 'ping' | 'ping_response' | 'craft_recipe_response' | 'abilities' | 'player_chat' | 'end_combat_event' | 'enter_combat_event' | 'death_combat_event' | 'player_remove' | 'player_info' | 'face_player' | 'position' | 'unlock_recipes' | 'entity_destroy' | 'remove_entity_effect' | 'reset_score' | 'remove_resource_pack' | 'add_resource_pack' | 'respawn' | 'entity_head_rotation' | 'multi_block_change' | 'select_advancement_tab' | 'server_data' | 'action_bar' | 'world_border_center' | 'world_border_lerp_size' | 'world_border_size' | 'world_border_warning_delay' | 'world_border_warning_reach' | 'camera' | 'held_item_slot' | 'update_view_position' | 'update_view_distance' | 'spawn_position' | 'scoreboard_display_objective' | 'entity_metadata' | 'attach_entity' | 'entity_velocity' | 'entity_equipment' | 'experience' | 'update_health' | 'scoreboard_objective' | 'set_passengers' | 'teams' | 'scoreboard_score' | 'simulation_distance' | 'set_title_subtitle' | 'update_time' | 'set_title_text' | 'set_title_time' | 'entity_sound_effect' | 'sound_effect' | 'start_configuration' | 'stop_sound' | 'store_cookie' | 'system_chat' | 'playerlist_header' | 'nbt_query_response' | 'collect' | 'entity_teleport' | 'set_ticking_state' | 'step_tick' | 'transfer' | 'advancements' | 'entity_update_attributes' | 'entity_effect' | 'declare_recipes' | 'tags';
-    params: undefined | any;
-  } | /** 1.21.3 */ {
-    name: 'bundle_delimiter' | 'spawn_entity' | 'spawn_entity_experience_orb' | 'animation' | 'statistics' | 'acknowledge_player_digging' | 'block_break_animation' | 'tile_entity_data' | 'block_action' | 'block_change' | 'boss_bar' | 'difficulty' | 'chunk_batch_finished' | 'chunk_batch_start' | 'chunk_biomes' | 'clear_titles' | 'tab_complete' | 'declare_commands' | 'close_window' | 'window_items' | 'craft_progress_bar' | 'set_slot' | 'cookie_request' | 'set_cooldown' | 'chat_suggestions' | 'custom_payload' | 'damage_event' | 'debug_sample' | 'hide_message' | 'kick_disconnect' | 'profileless_chat' | 'entity_status' | 'sync_entity_position' | 'explosion' | 'unload_chunk' | 'game_state_change' | 'open_horse_window' | 'hurt_animation' | 'initialize_world_border' | 'keep_alive' | 'map_chunk' | 'world_event' | 'world_particles' | 'update_light' | 'login' | 'map' | 'trade_list' | 'rel_entity_move' | 'entity_move_look' | 'move_minecart' | 'entity_look' | 'vehicle_move' | 'open_book' | 'open_window' | 'open_sign_entity' | 'ping' | 'ping_response' | 'craft_recipe_response' | 'abilities' | 'player_chat' | 'end_combat_event' | 'enter_combat_event' | 'death_combat_event' | 'player_remove' | 'player_info' | 'face_player' | 'position' | 'player_rotation' | 'recipe_book_add' | 'recipe_book_remove' | 'recipe_book_settings' | 'entity_destroy' | 'remove_entity_effect' | 'reset_score' | 'remove_resource_pack' | 'add_resource_pack' | 'respawn' | 'entity_head_rotation' | 'multi_block_change' | 'select_advancement_tab' | 'server_data' | 'action_bar' | 'world_border_center' | 'world_border_lerp_size' | 'world_border_size' | 'world_border_warning_delay' | 'world_border_warning_reach' | 'camera' | 'update_view_position' | 'update_view_distance' | 'set_cursor_item' | 'spawn_position' | 'scoreboard_display_objective' | 'entity_metadata' | 'attach_entity' | 'entity_velocity' | 'entity_equipment' | 'experience' | 'update_health' | 'held_item_slot' | 'scoreboard_objective' | 'set_passengers' | 'set_player_inventory' | 'teams' | 'scoreboard_score' | 'simulation_distance' | 'set_title_subtitle' | 'update_time' | 'set_title_text' | 'set_title_time' | 'entity_sound_effect' | 'sound_effect' | 'start_configuration' | 'stop_sound' | 'store_cookie' | 'system_chat' | 'playerlist_header' | 'nbt_query_response' | 'collect' | 'entity_teleport' | 'set_ticking_state' | 'step_tick' | 'transfer' | 'advancements' | 'entity_update_attributes' | 'entity_effect' | 'declare_recipes' | 'tags' | 'set_projectile_power' | 'custom_report_details' | 'server_links';
-    params: undefined | any;
-  };
   difficulty: /** 1.8 */ {
     difficulty: number;
   } | /** 1.14 */ {
@@ -2252,6 +2204,17 @@ any
     prefix: any | undefined;
     suffix: any | undefined;
     players: string[] | undefined;
+  } | /** 1.21.5 */ {
+    team: string;
+    mode: number;
+    name: any | undefined;
+    friendlyFire: number | undefined;
+    nameTagVisibility: number | undefined;
+    collisionRule: number | undefined;
+    formatting: number | undefined;
+    prefix: any | undefined;
+    suffix: any | undefined;
+    players: string[] | undefined;
   };
   sound_effect: /** 1.9 */ {
     soundId: number;
@@ -2378,6 +2341,26 @@ any
     criterionProgress: any | null;
   }[];
   }[];
+  } | /** 1.21.5 */ {
+    reset: boolean;
+    advancementMapping: {
+    key: string;
+    value: {
+    parentId: any | null;
+    displayData: any | null;
+    requirements: string[][];
+    sendsTelemtryData: boolean;
+  };
+  }[];
+    identifiers: string[];
+    progressMapping: {
+    key: string;
+    value: {
+    criterionIdentifier: string;
+    criterionProgress: any | null;
+  }[];
+  }[];
+    showAdvancements: boolean;
   };
   /** Removed in 1.21.3 */
   unlock_recipes: /** 1.12 */ {
@@ -2840,6 +2823,28 @@ any
     experience: number;
     isRegularVillager: boolean;
     canRestock: boolean;
+  } | /** 1.21.5 */ {
+    windowId: any;
+    trades: {
+    inputItem1: {
+    itemId: number;
+    itemCount: number;
+    components: any;
+  };
+    outputItem: any;
+    inputItem2: any | null;
+    tradeDisabled: boolean;
+    nbTradeUses: number;
+    maximumNbTradeUses: number;
+    xp: number;
+    specialPrice: number;
+    priceMultiplier: number;
+    demand: number;
+  }[];
+    villagerLevel: number;
+    experience: number;
+    isRegularVillager: boolean;
+    canRestock: boolean;
   };
   open_book: /** 1.14 */ {
     hand: number;
@@ -3064,6 +3069,21 @@ any
     type: any;
     networkName: any;
     networkTargetName: any | null;
+  } | /** 1.21.5 */ {
+    globalIndex: number;
+    senderUuid: string;
+    index: number;
+    signature: any | null;
+    plainMessage: string;
+    timestamp: bigint;
+    salt: bigint;
+    previousMessages: any;
+    unsignedChatContent: any | null;
+    filterType: number;
+    filterTypeMask: bigint[] | undefined;
+    type: any;
+    networkName: any;
+    networkTargetName: any | null;
   };
   /** Removed in 1.19.3 */
   should_display_chat_preview: /** 1.19 */ {
@@ -3196,40 +3216,9 @@ any
   step_tick: /** 1.20.3 */ {
     tick_steps: number;
   };
-  SpawnInfo: /** 1.20.5 */ {
-    dimension: number;
-    name: string;
-    hashedSeed: bigint;
-    gamemode: 'survival' | 'creative' | 'adventure' | 'spectator';
-    previousGamemode: number;
-    isDebug: boolean;
-    isFlat: boolean;
-    death: any | null;
-    portalCooldown: number;
-  } | /** 1.21.3 */ {
-    dimension: number;
-    name: string;
-    hashedSeed: bigint;
-    gamemode: 'survival' | 'creative' | 'adventure' | 'spectator';
-    previousGamemode: number;
-    isDebug: boolean;
-    isFlat: boolean;
-    death: any | null;
-    portalCooldown: number;
-    seaLevel: number;
-  };
   debug_sample: /** 1.20.5 */ {
     sample: bigint[];
     type: number;
-  };
-  ChatType: /** 1.20.5 */ {
-    translationKey: string;
-    parameters: any[];
-    style: any;
-  };
-  ChatTypes: /** 1.20.5 */ {
-    chat: any;
-    narration: any;
   };
   set_projectile_power: /** 1.20.5 */ {
     id: number;
@@ -3237,48 +3226,6 @@ any
   } | /** 1.21.1 */ {
     id: number;
     accelerationPower: number;
-  };
-  SlotDisplay: /** 1.21.3 */ {
-    type: 'empty' | 'any_fuel' | 'item' | 'item_stack' | 'tag' | 'smithing_trim' | 'with_remainder' | 'composite';
-    data: undefined | number | any | string | {
-    base: any;
-    material: any;
-    pattern: any;
-  } | {
-    input: any;
-    remainder: any;
-  } | any[];
-  };
-  RecipeDisplay: /** 1.21.3 */ {
-    type: 'crafting_shapeless' | 'crafting_shaped' | 'furnace' | 'stonecutter' | 'smithing';
-    data: {
-    ingredients: any[];
-    result: any;
-    craftingStation: any;
-  } | {
-    width: number;
-    height: number;
-    ingredients: any[];
-    result: any;
-    craftingStation: any;
-  } | {
-    ingredient: any;
-    fuel: any;
-    result: any;
-    craftingStation: any;
-    duration: number;
-    experience: number;
-  } | {
-    ingredient: any;
-    result: any;
-    craftingStation: any;
-  } | {
-    template: any;
-    base: any;
-    addition: any;
-    result: any;
-    craftingStation: any;
-  };
   };
   sync_entity_position: /** 1.21.3 */ {
     entityId: number;
@@ -3334,10 +3281,19 @@ any
   };
   set_cursor_item: /** 1.21.3 */ {
     contents: any | null;
+  } | /** 1.21.4 */ {
+    contents: any;
   };
   set_player_inventory: /** 1.21.3 */ {
     slotId: number;
     contents: any | null;
+  } | /** 1.21.4 */ {
+    slotId: number;
+    contents: any;
+  };
+  test_instance_block_status: /** 1.21.5 */ {
+    status: any;
+    size: any | null;
   };
 }
 
