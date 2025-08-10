@@ -7,6 +7,9 @@
         "watch": "tsc --watch",
         "build": "tsc"
     },
+    "files": [
+        "dist"
+    ],
     "release": {
         "initialVersion": {
             "version": "0.1.0"
