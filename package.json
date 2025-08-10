@@ -23,6 +23,7 @@
         "@types/node": "^24.2.1",
         "@zardoy/tsconfig": "^1.5.1",
         "minecraft-data": "^3.95.0",
+        "minecraft-protocol": "^1.60.1",
         "tsx": "^4.20.3",
         "typescript": "^5.9.2"
     },
