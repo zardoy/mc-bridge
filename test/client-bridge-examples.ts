@@ -1,4 +1,5 @@
 import { ClientPacketBridger } from '../src/index'
+import { testVersions } from './tester'
 
 // Mock write function for demonstration
 const mockWritePacket = (name: string, data: any) => {
@@ -6,25 +7,25 @@ const mockWritePacket = (name: string, data: any) => {
         typeof value === 'bigint' ? value.toString() + 'n' : value, 2))
 }
 
-const oldClientBridger = new ClientPacketBridger('1.7', mockWritePacket)
+testVersions(({client: clientBridger, deserializer: deser}) => {
 
 // Keep alive example
-oldClientBridger.keep_alive({ keepAliveId: 12345 })
+clientBridger.keep_alive({ keepAliveId: 12345 })
 
 // Movement examples
-oldClientBridger.position({ x: 100.5, y: 64.0, z: 200.5 })
-oldClientBridger.look({ yaw: 90.0, pitch: 0.0 })
-oldClientBridger.position_look({ x: 100.5, y: 64.0, z: 200.5, yaw: 90.0, pitch: 0.0 })
-oldClientBridger.flying({ onGround: true })
+clientBridger.position({ x: 100.5, y: 64.0, z: 200.5 })
+clientBridger.look({ yaw: 90.0, pitch: 0.0 })
+clientBridger.position_look({ x: 100.5, y: 64.0, z: 200.5, yaw: 90.0, pitch: 0.0 })
+clientBridger.flying({ onGround: true })
 
 // Block actions
-oldClientBridger.block_dig({
+clientBridger.block_dig({
     status: 0,
     location: { x: 100, y: 64, z: 200 },
     face: 1
 })
 
-oldClientBridger.block_place({
+clientBridger.block_place({
     location: { x: 100, y: 64, z: 200 },
     direction: 1,
     cursorX: 8,
@@ -33,17 +34,18 @@ oldClientBridger.block_place({
 })
 
 // Item and interaction
-oldClientBridger.held_item_slot({ slotId: 0 })
-oldClientBridger.arm_animation({ hand: 0 })
+clientBridger.held_item_slot({ slotId: 0 })
+clientBridger.arm_animation({ hand: 0 })
 
 // Entity interactions
-oldClientBridger.entity_action({
+clientBridger.entity_action({
     entityId: 123,
     actionId: 1,
     jumpBoost: 0
 })
 
-oldClientBridger.use_entity({
+clientBridger.use_entity({
     target: 456,
     mouse: 0
 })
+}, ['1.18.2'])

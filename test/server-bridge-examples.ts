@@ -9,7 +9,7 @@ const mockWritePacket = (name: string, data: any) => {
 
 // const modernBridger = new ServerPacketBridger('1.21.5', mockWritePacket)
 
-testVersions((modernBridger) => {
+testVersions(({server: modernBridger}) => {
 
     // Player info example
     modernBridger.player_info({

@@ -116,7 +116,7 @@ export class ServerPacketBridger extends BasePacketBridger {
                     data: data.data.map(player => ({
                         uuid: player.uuid,
                         // Include relevant data based on action
-                        ...(actionName === 'add_player' && player.player ? { name: player.player.name, properties: player.player.properties } : {}),
+                        ...(actionName === 'add_player' && player.player ? { name: player.player.name, properties: player.player.properties, gamemode: player.gamemode, listed: player.listed, latency: player.latency, displayName: this.processNbt(player.displayName), listPriority: player.listPriority, showHat: player.showHat } : {}),
                         ...(actionName === 'update_game_mode' && player.gamemode !== undefined ? { gamemode: player.gamemode } : {}),
                         ...(actionName === 'update_latency' && player.latency !== undefined ? { ping: player.latency, latency: player.latency } : {}),
                         ...(actionName === 'update_display_name' && player.displayName !== undefined ? { displayName: this.processNbt(player.displayName) } : {}),
